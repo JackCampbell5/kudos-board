@@ -1,0 +1,26 @@
+.Board{
+    width: 200px;
+    height: 375px;
+    margin: 10px;
+    padding: 5px;
+    border: #460075 solid 2px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+.Board img{
+    width: 200px;
+}
+.Board p{
+    margin: 5px;
+}
+.title{
+    font-size: 150%;
+    height: 15%;
+    margin: 10px;
+}
+
+.description{
+    font-size: 75%;
+    height: 15%;
+}

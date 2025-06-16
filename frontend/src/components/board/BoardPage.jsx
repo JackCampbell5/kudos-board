@@ -1,22 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import './BoardList.css'
+import './BoardPage.css'
 import PropTypes from 'prop-types';
 
 
 
-function BoardList({data}) {
+function BoardPage({data}) {
   return (
     // JSX code for rendering the component
-    <div className="BoardList">
-        <h3>BoardList</h3>
-    </div>
+    <div className="BoardPage">
+        <h3>BoardPage</h3>
+        </div>
   );
 }
 
-BoardList.propTypes = {
+BoardPage.propTypes = {
     // data: PropTypes.array.isRequired,
 };
 
 
-export default BoardList;
+export default BoardPage;

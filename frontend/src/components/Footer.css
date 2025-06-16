@@ -1,0 +1,13 @@
+.Footer{
+    margin: 40px;
+    bottom: 0%;
+}
+ /* My email */
+.authorName{
+    color: rgb(155, 0, 106);
+}
+/* The Link that is my email */
+.Footer a{
+    color:  rgb(104, 0, 71);
+    margin: 0px 50px;
+}

@@ -1,0 +1,37 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import './Board.css'
+import PropTypes from 'prop-types';
+import {catTranslate} from './../../utils/utils'
+
+
+
+function Board({data,clickBoard,deleteBoard}) {
+    let title = data.title;
+    let category = data.category;
+    let author = data.author;
+    let icon = data.icon;
+    let description = data.description;
+    function deleteBoardHelp(e){
+        e.stopPropagation();
+        deleteBoard(title);// TODO change to id in the future
+    }
+  return (
+    // JSX code for rendering the component
+    <div className="Board" onClick={clickBoard}>
+        <img className="icon" src={icon} alt={"Playlist Icon for" + title}/>
+        <p className="title">{title}</p>
+        <p className="category">{catTranslate(category)}</p>
+        {author!==""?<p className="author">By: {author}</p>:null}
+        <p className="description">{description}</p>
+        <button className="delete" onClick={deleteBoardHelp}>Delete</button>
+    </div>
+  );
+}
+
+Board.propTypes = {
+    // data: PropTypes.array.isRequired,
+};
+
+
+export default Board;
