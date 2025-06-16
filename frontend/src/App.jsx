@@ -14,10 +14,12 @@ function App() {
 
   return (
    <div className='App'>
+    <button onClick={() => setActivePage("")}>Home</button>
+    {/* Make into the Main header eventually  */}
     <MainHeader />
     {activePage === ""?
     <HomePage setActivePage={setActivePage}/>:
-    <BoardPage/>}
+    <BoardPage activePage={activePage}/>}
     <Footer />
   </div>
   )

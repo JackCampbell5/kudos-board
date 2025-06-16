@@ -24,8 +24,6 @@ function NewBoard({addNewBoard}) {
     //TODO Make icon use the giphy component I will be creating
     const [newBoard, setNewBoard] = useState(defaultBoard);
     function submit() {
-        swapActive();
-        console.log(newBoard);
         for (const key in newBoard) {
         if(newBoard[key] === ""&&key !=="author") {
             alert("Please fill out all fields");
@@ -33,6 +31,7 @@ function NewBoard({addNewBoard}) {
             return;
         }
         }
+        swapActive();
         addNewBoard(newBoard);
     }
 

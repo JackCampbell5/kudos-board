@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import './Board.css'
-import PropTypes from 'prop-types';
+import PropTypes, { func } from 'prop-types';
 import {catTranslate} from './../../utils/utils'
 
 
@@ -15,11 +15,14 @@ function Board({data,clickBoard,deleteBoard}) {
     let description = data.description;
     function deleteBoardHelp(e){
         e.stopPropagation();
-        deleteBoard(id);// TODO change to id in the future
+        deleteBoard(id);
+    }
+    function clickBoardHelp(e){
+      clickBoard(id);
     }
   return (
     // JSX code for rendering the component
-    <div className="Board" onClick={clickBoard}>
+    <div className="Board" onClick={clickBoardHelp}>
         <img className="icon" src={icon} alt={"Playlist Icon for" + title}/>
         <p className="title">{title}</p>
         <p className="category">{catTranslate(category)}</p>

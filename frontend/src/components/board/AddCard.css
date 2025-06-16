@@ -1,0 +1,13 @@
+.NewCard{
+    margin: 20px;
+}
+.addCardDiv{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.addCardLabel{
+    font-size: large;
+}

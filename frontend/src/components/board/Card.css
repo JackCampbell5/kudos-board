@@ -1,0 +1,29 @@
+.Card{
+    width: 200px;
+    height: 375px;
+    margin: 10px;
+    padding: 5px;
+    border: #460075 solid 2px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+.Card img{
+    width: 200px;
+}
+.Card p{
+    margin: 5px;
+}
+.title{
+    font-size: 150%;
+    height: 15%;
+    margin: 10px;
+}
+
+.message{
+    font-size: 75%;
+    height: 10%;
+}
+.Card button{
+ font-size: small;
+}
