@@ -23,6 +23,7 @@ h1{
     padding: 1px 1px 1px 3px;
     margin: 10px;
     border-radius: 10px;
+    width: fit-content;
 }
 .TopHome input{
     width: 30vw;

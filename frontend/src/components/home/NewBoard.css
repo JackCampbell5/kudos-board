@@ -1,0 +1,13 @@
+.NewBoard{
+    margin: 20px;
+}
+.addBoardDiv{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.addBoardLabel{
+    font-size: large;
+}

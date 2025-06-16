@@ -3,12 +3,14 @@ import ReactDOM from "react-dom";
 import './BoardList.css'
 import PropTypes, { func } from 'prop-types';
 import Board from './Board'
+import {deleteBoardAPI} from './../../utils/utils'
 
 
-function BoardList({listData, searchTerm, filterType, setActivePage}) {
+function BoardList({listData, setListData, searchTerm, filterType, setActivePage}) {
   let num =0;
   function deleteBoard(id){
-    console.log(id);
+    deleteBoardAPI(id, ()=>setListData(listData.filter(board => board.id !== id)) );
+
   }
   return (
     // JSX code for rendering the component
@@ -16,7 +18,7 @@ function BoardList({listData, searchTerm, filterType, setActivePage}) {
         <div id="boards">
       {listData.map(obj =>  {
             if((filterType==="all"||obj.category===filterType)&&(obj.title.toLowerCase().includes(searchTerm)||searchTerm==="")){ num++;
-          return(<Board key={obj.title} data={obj} clickBoard={setActivePage}  deleteBoard={(deleteBoard)}/>)
+          return(<Board key={obj.id} data={obj} clickBoard={setActivePage}  deleteBoard={(deleteBoard)}/>)
       }else{<p>{obj.id}</p>}
       })}
       </div>

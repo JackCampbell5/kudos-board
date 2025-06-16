@@ -5,7 +5,8 @@ import PropTypes, { func } from 'prop-types';
 import { useState } from "react";
 import TopHome from "./TopHome";
 import BoardList from "./BoardList";
-import {fetchBoards} from './../../utils/utils.js'
+import NewBoard from "./NewBoard";
+import {fetchBoards,createBoardAPI} from './../../utils/utils.js'
 import { useEffect } from "react";
 
 
@@ -20,15 +21,22 @@ function HomePage({data,setActivePage}) {
   const [filterType, setFilterType] = useState("all");
 
   const [listData, setListData] = useState([]);
-  useEffect((()=>{fetchBoards(setListData)}),[]);
+  useEffect(()=>{fetchBoards(setListData)},[]);
+  function addBoard(board){
+    setListData(listData => [...listData, board]);
+  }
 
+  function addNewBoard(newBoard){
+    createBoardAPI(newBoard, addBoard)
+  }
 
   return (
     // JSX code for rendering the component
     <div className="HomePage">
         <h1>Home</h1>
         <TopHome searchTerm={searchTerm} setSearchTerm={setSearchTerm} search={search} filterType={filterType} setFilterType={setFilterType}/>
-        <BoardList listData={listData} searchTerm={searchGo} filterType={filterType} setActivePage={setActivePage} />
+        <NewBoard addNewBoard={addNewBoard}/>
+        <BoardList listData={listData} setListData={setListData} searchTerm={searchGo} filterType={filterType} setActivePage={setActivePage} />
     </div>
   );
 }

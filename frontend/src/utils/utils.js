@@ -1,65 +1,61 @@
 export async function fetchBoards(after){
-    const kudosBoards = [
-        {
-          title: "Team Success",
-          category: "celebration",
-          author: "Alice Johnson",
-          icon: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWNvb2RoeXI5amJlcTNzNXVrMmFqMmx0aWFncW1ycHRoMWlwdDNxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Zt6ML6BklcajjsA/giphy.gif",
-          description: "Celebrating the team's outstanding success and achievements in the recent project."
-
-        },
-        {
-          title: "Great Job on the Project",
-          category: "thanks",
-          author: "Bob Smith",
-          icon: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWNvb2RoeXI5amJlcTNzNXVrMmFqMmx0aWFncW1ycHRoMWlwdDNxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Zt6ML6BklcajjsA/giphy.gif",
-          description: "A big thank you to everyone for their hard work and dedication on the project."
-
-        },
-        {
-          title: "Daily Inspiration",
-          category: "inspo",
-          author: "Carol Lee",
-          icon: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWNvb2RoeXI5amJlcTNzNXVrMmFqMmx0aWFncW1ycHRoMWlwdDNxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Zt6ML6BklcajjsA/giphy.gif",
-          description: "Kickstart your day with a dose of daily inspiration and motivation."
-        },
-        {
-          title: "Recent Achievements",
-          category: "recent",
-          author: "David Brown",
-          icon: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWNvb2RoeXI5amJlcTNzNXVrMmFqMmx0aWFncW1ycHRoMWlwdDNxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Zt6ML6BklcajjsA/giphy.gif",
-          description: "Highlighting the most recent achievements and milestones reached by our team."
-        },
-        {
-          title: "Birthday Bash",
-          category: "celebration",
-          author: "Eve Davis",
-          icon: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWNvb2RoeXI5amJlcTNzNXVrMmFqMmx0aWFncW1ycHRoMWlwdDNxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Zt6ML6BklcajjsA/giphy.gif",
-          description: "Expressing gratitude for the relentless hard work and commitment shown by the team."
-        },
-        {
-          title: "Thank You for Your Hard Work",
-          category: "thanks",
-          author: "Frank Wilson",
-          icon: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWNvb2RoeXI5amJlcTNzNXVrMmFqMmx0aWFncW1ycHRoMWlwdDNxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Zt6ML6BklcajjsA/giphy.gif",
-          description: "Join us in celebrating the birthdays of our amazing team members this month."
-        },
-        {
-            title: "Motivational Monday",
-            category: "inspo",
-            author: "Grace Kim",
-            icon: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWNvb2RoeXI5amJlcTNzNXVrMmFqMmx0aWFncW1ycHRoMWlwdDNxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Zt6ML6BklcajjsA/giphy.gif",
-            description: "Start your week with motivational quotes and stories to keep you inspired."
-        },
-        {
-          title: "Weekly Highlights",
-          category: "recent",
-          author: "Henry White",
-          icon: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWNvb2RoeXI5amJlcTNzNXVrMmFqMmx0aWFncW1ycHRoMWlwdDNxdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Zt6ML6BklcajjsA/giphy.gif",
-          description: "A recap of the week's highlights and key moments worth celebrating."
+    await fetch('http://localhost:4000/boards')
+    .then(response => {
+        if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
         }
-      ];
-      after(kudosBoards);
+        return response.json(); // Parse JSON data from the response
+    })
+    .then(data => {
+        // Handle successful response
+        console.log('Boards:', data);
+        // Update UI or perform other actions with the data
+        after(data);
+    })
+    .catch(error => {
+        // Handle error
+        console.error('Error fetching boards:', error);
+        // Display an error message or retry the request
+    });
+}
+
+
+export async function deleteBoardAPI(id,after) {
+    console.log("Deleting board with id: " + id);
+    await fetch(`http://localhost:4000/boards/delete/${id}`,{method: 'DELETE'})
+    .then(response => {
+        if (!response.ok) {
+        throw new Error(`Error deleting error! status: ${response.status}`);
+        }else{
+            after();
+        }});
+
+}
+
+export async function createBoardAPI(info,after) {
+    await fetch('http://localhost:4000/boards/add',{method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(info)})
+    .then(response => {
+        if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json(); // Parse JSON data from the response
+    })
+    .then(data => {
+        // Handle successful response
+        console.log('Boards:', data);
+        // Update UI or perform other actions with the data
+        after(data);
+    })
+    .catch(error => {
+        // Handle error
+        console.error('Error fetching boards:', error);
+        // Display an error message or retry the request
+    });
+}
+
+
+export async function fetchBoard(id, after){
+
 }
 
 
@@ -78,3 +74,11 @@ export function catTranslate(category){
     }
 
 }
+
+
+export function convertToTitleCase(str) {
+    if (!str) {
+      return "";
+    }
+    return str.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase());
+  }

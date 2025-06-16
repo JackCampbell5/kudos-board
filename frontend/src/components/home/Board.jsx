@@ -7,6 +7,7 @@ import {catTranslate} from './../../utils/utils'
 
 
 function Board({data,clickBoard,deleteBoard}) {
+    let id = data.id;
     let title = data.title;
     let category = data.category;
     let author = data.author;
@@ -14,7 +15,7 @@ function Board({data,clickBoard,deleteBoard}) {
     let description = data.description;
     function deleteBoardHelp(e){
         e.stopPropagation();
-        deleteBoard(title);// TODO change to id in the future
+        deleteBoard(id);// TODO change to id in the future
     }
   return (
     // JSX code for rendering the component
