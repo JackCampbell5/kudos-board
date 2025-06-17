@@ -28,10 +28,7 @@ function NewBoard({addNewBoard}) {
     //TODO Make icon use the giphy component I will be creating
     const [newBoard, setNewBoard] = useState(defaultBoard);
     function submit() {
-        console.log("Gif: ", gif);
-        console.log({...newBoard, gif: gif})
         let newHelper = ({...newBoard, icon: gif})
-        console.log(newHelper);
         for (const key in newHelper) {
         if(newHelper[key] === ""&&key !=="author") {
             alert("Please fill out all fields");

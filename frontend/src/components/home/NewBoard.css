@@ -1,5 +1,12 @@
 .NewBoard{
-    margin: 20px;
+    margin: 10px;
+}
+.newBoardMaker{
+    border: 2px solid #f8bcd0;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    /* TODO ADD a transition  */
 }
 .addBoardDiv{
     display: flex;

@@ -10,7 +10,7 @@ function Card({data,deleteCard}) {
   let title = data.title;
   let message = data.message;
   let author = data.author;
-  let gif = data.gif;
+  let icon = data.icon;
   let upvoteCount = data.upvoteCount;
   function deleteCardHelp(e){
     e.stopPropagation();
@@ -19,7 +19,7 @@ function Card({data,deleteCard}) {
   return (
     // JSX code for rendering the component
     <div className="Card">
-        <img className="gif"src={gif}/>
+        <img className="icon"src={icon}/>
         <p className="title">{title}</p>
         <p className="message">{message}</p>
         <p className="author">{author}</p>
