@@ -96,9 +96,32 @@ export async function createCardAPI(id,info,after) {
     });
 }
 
-export async function deleteCardAPI(id,after) {
+
+export async function addVoteCardAPI(boardID,cardID,after) {
+    await fetch(`http://localhost:4000/boards/${boardID}/cards/${cardID}/voteUp`,{method: 'PUT', headers: {'Content-Type': 'application/json'}})
+    .then(response => {
+        if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json(); // Parse JSON data from the response
+    })
+    .then(data => {
+        // Handle successful response
+        console.log('Card With More votes:', data);
+        // Update UI or perform other actions with the data
+        after(cardID,data);
+    })
+    .catch(error => {
+        // Handle error
+        console.error('Error fetching boards:', error);
+        // Display an error message or retry the request
+    });
+}
+
+
+export async function deleteCardAPI(boardID, cardID,after) {
     console.log("Deleting card with id: " + id);
-    await fetch(`http://localhost:4000/boards/${id}/cards/delete`,{method: 'DELETE'})
+    await fetch(`http://localhost:4000/boards/${boardID}/cards/${cardID}/delete`,{method: 'DELETE'})
     .then(response => {
         if (!response.ok) {
         throw new Error(`Error deleting error! status: ${response.status}`);

@@ -3,18 +3,30 @@ import ReactDOM from "react-dom";
 import './CardList.css'
 import PropTypes, { func } from 'prop-types';
 import Card from "./Card";
-import {deleteCardAPI} from './../../utils/utils.js'
+import {deleteCardAPI,addVoteCardAPI} from './../../utils/utils.js'
 
 
 
 function CardList({cardList,setCardList,id}) {
 
   let num =0;
-  function openComments(id){
-    console.log("openComments",id);
+  function openComments(cardID){
+    console.log("Comments",cardID);
   }
-  function deleteCard(id){
-    deleteCardAPI(id, ()=>setCardList(cardList.filter(card => card.id !== id)) );
+  function upvoteCards(cardID){
+    console.log(cardID);
+    addVoteCardAPI(id,cardID,updateCard)
+  }
+  function deleteCard(cardID){
+    deleteCardAPI(id, cardID,()=>setCardList(cardList.filter(card => card.id !== id)) );
+  }
+  function updateCard(cardID, cardData){
+    if(cardData){
+      let result = cardList.map(card => card.id===cardID?cardData:card);
+      console.log(result);
+      setCardList(result);
+    }
+
   }
   return (
     // JSX code for rendering the component
@@ -22,7 +34,7 @@ function CardList({cardList,setCardList,id}) {
         <div id="Cards">
         {cardList.map(obj =>  {
            num++;
-            return(<Card key={obj.id} data={obj} clickCard={openComments}  deleteCard={(deleteCard)}/>)
+            return(<Card key={obj.id} data={obj} upvoteCards={upvoteCards} clickCard={openComments}  deleteCard={(deleteCard)}/>)
        })}
         </div>
         <div id="CardTotal">
