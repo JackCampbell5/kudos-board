@@ -60,7 +60,7 @@ const router = express.Router()
   }
   })
 
-  router.delete('/:boardID/cards/delete/:cardID', async (req, res) => {
+  router.delete('/:boardID/cards/:cardID/delete', async (req, res) => {
     const { boardID,cardID } = req.params
 
     try{
@@ -75,6 +75,27 @@ const router = express.Router()
       res.status(404).send('Board not found')
 
     }
+  })
+
+  router.put('/:boardID/cards/:cardID/voteUp', async (req, res) => {
+    const { boardID,cardID } = req.params
+    try{
+    const updateOne = await prisma.Card.update({
+      where: {
+        id: parseInt(cardID),
+      },
+
+      data: {
+        upvoteCount: {
+          increment: 1, // ? increment, decrement, multiply, divide, append, prepend, delete, remove, disconnect, connect, set
+        },
+      },
+    })
+    res.json(updateOne)
+    res.status(204).send()
+  }catch{
+    res.status(404).send('Card not found')
+  }
   })
 
   module.exports = router
