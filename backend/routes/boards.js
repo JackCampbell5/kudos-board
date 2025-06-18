@@ -5,8 +5,6 @@ const express = require('express')
 const router = express.Router()
 
   router.get("/", async (req, res) => {
-    console.log(process.env.DATABASE_URL);
-    console.log("HIiiiiiiiii");
     const findBoards = await prisma.board.findMany()
     res.json(findBoards);
   });

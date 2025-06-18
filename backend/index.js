@@ -15,6 +15,18 @@ app.get('/', (req, res) => {
 app.use('/boards', boardRoutes)
 
 
+app.get('/seedDatabase/', (req, res) => {
+    const { exec } = require('child_process');
+    exec('npx prisma db seed', (error, stdout, stderr) => {
+    if (error) {
+        console.error(`exec error: ${error}`);
+        res.status(500).send('Error seeding database');
+    }else{
+    console.log(stdout);
+    res.send('Database seeded successfully');
+    }});
+});
+
 app.listen(port, () => {
     console.log(`Server Started at http://localhost:${port}`);
 });
