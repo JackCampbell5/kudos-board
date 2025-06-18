@@ -1,5 +1,8 @@
+
+const boardLink = import.meta.env.VITE_BACKEND_API;
 export async function fetchBoards(after){
-    await fetch('http://localhost:4000/boards')
+    console.log(boardLink);
+    await fetch(`${boardLink}`)
     .then(response => {
         if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -20,7 +23,7 @@ export async function fetchBoards(after){
 }
 
 export async function fetchCards(id,after){
-    await fetch(`http://localhost:4000/boards/${id}/cards`)
+    await fetch(`${boardLink}${id}/cards`)
     .then(response => {
         if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -43,7 +46,7 @@ export async function fetchCards(id,after){
 
 export async function deleteBoardAPI(id,after) {
     console.log("Deleting board with id: " + id);
-    await fetch(`http://localhost:4000/boards/delete/${id}`,{method: 'DELETE'})
+    await fetch(`${boardLink}delete/${id}`,{method: 'DELETE'})
     .then(response => {
         if (!response.ok) {
         throw new Error(`Error deleting error! status: ${response.status}`);
@@ -54,7 +57,7 @@ export async function deleteBoardAPI(id,after) {
 }
 
 export async function createBoardAPI(info,after) {
-    await fetch('http://localhost:4000/boards/add',{method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(info)})
+    await fetch(`${boardLink}add`,{method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(info)})
     .then(response => {
         if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -76,7 +79,7 @@ export async function createBoardAPI(info,after) {
 
 
 export async function createCardAPI(id,info,after) {
-    await fetch(`http://localhost:4000/boards/${id}/cards/add`,{method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(info)})
+    await fetch(`${boardLink}${id}/cards/add`,{method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(info)})
     .then(response => {
         if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -98,7 +101,7 @@ export async function createCardAPI(id,info,after) {
 
 
 export async function addVoteCardAPI(boardID,cardID,after) {
-    await fetch(`http://localhost:4000/boards/${boardID}/cards/${cardID}/voteUp`,{method: 'PUT', headers: {'Content-Type': 'application/json'}})
+    await fetch(`${boardLink}${boardID}/cards/${cardID}/voteUp`,{method: 'PUT', headers: {'Content-Type': 'application/json'}})
     .then(response => {
         if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -121,7 +124,7 @@ export async function addVoteCardAPI(boardID,cardID,after) {
 
 export async function deleteCardAPI(boardID, cardID,after) {
     console.log("Deleting card with id: " + id);
-    await fetch(`http://localhost:4000/boards/${boardID}/cards/${cardID}/delete`,{method: 'DELETE'})
+    await fetch(`${boardLink}${boardID}/cards/${cardID}/delete`,{method: 'DELETE'})
     .then(response => {
         if (!response.ok) {
         throw new Error(`Error deleting error! status: ${response.status}`);

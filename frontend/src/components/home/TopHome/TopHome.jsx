@@ -4,8 +4,6 @@ import './TopHome.css'
 import PropTypes from 'prop-types';
 import Search from '../../allPages/Search/Search'
 
-
-
 function TopHome({searchTerm,setSearchTerm,search, filterType, setFilterType}) {
   return (
     // JSX code for rendering the component
