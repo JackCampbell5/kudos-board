@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import './Card.css'
-import PropTypes from 'prop-types';
+import PropTypes, { func } from 'prop-types';
 
 
 
-function Card({data,deleteCard}) {
+function Card({data,deleteCard,upvoteCards}) {
   let id = data.id;
   let title = data.title;
   let message = data.message;
@@ -16,6 +16,9 @@ function Card({data,deleteCard}) {
     e.stopPropagation();
     deleteCard(id);
 }
+function upvoteCardsHelp(e){
+  upvoteCards(id)
+}
   return (
     // JSX code for rendering the component
     <div className="Card">
@@ -23,7 +26,7 @@ function Card({data,deleteCard}) {
         <p className="title">{title}</p>
         <p className="message">{message}</p>
         <p className="author">{author}</p>
-        <button className="upvoteCount">Upvotes: {upvoteCount}</button>
+        <button className="upvoteCount" onClick={upvoteCardsHelp}>Upvotes: {upvoteCount}</button>
         <button className="delete" onClick={deleteCardHelp}>Delete</button>
     </div>
   );
