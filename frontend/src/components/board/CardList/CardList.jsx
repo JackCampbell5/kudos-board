@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './CardList.css'
 import PropTypes, { func } from 'prop-types';
-import Card from "./Card";
-import {deleteCardAPI,addVoteCardAPI} from './../../utils/utils.js'
+import Card from "../Card/Card.jsx";
+import {deleteCardAPI,addVoteCardAPI} from '../../../utils/utils.js'
 
 
 

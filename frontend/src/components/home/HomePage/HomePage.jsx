@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import './HomePage.css'
 import PropTypes, { func } from 'prop-types';
 import { useState } from "react";
-import TopHome from "./TopHome";
-import BoardList from "./BoardList";
-import NewBoard from "./NewBoard";
-import {fetchBoards,createBoardAPI} from './../../utils/utils.js'
+import TopHome from "../TopHome/TopHome.jsx";
+import BoardList from "../BoardList/BoardList";
+import NewBoard from "../NewBoard/NewBoard.jsx";
+import {fetchBoards,createBoardAPI} from '../../../utils/utils.js'
 import { useEffect } from "react";
 
 

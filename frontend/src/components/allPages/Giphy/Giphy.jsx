@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import './Giphy.css'
 import PropTypes, { func } from 'prop-types';
 import { useEffect, useState } from "react";
-import { fetchGifts,searchGifts } from "../utils/gifs";
-import Search from "./Search";
+import { fetchGifts,searchGifts } from "../../../utils/gifs";
+import Search from "../Search/Search";
 
 
 

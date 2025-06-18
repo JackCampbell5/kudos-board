@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './BoardPage.css'
 import PropTypes from 'prop-types';
-import {fetchCards,createCardAPI} from './../../utils/utils.js'
+import {fetchCards,createCardAPI} from '../../../utils/utils.js'
 import {useState, useEffect } from "react";
-import TopBoard from "./TopBoard";
-import CardList from "./CardList";
-import AddCard  from "./AddCard";
-import Modal from "./Modal";
+import TopBoard from "../TopBoard/TopBoard.jsx";
+import CardList from "../CardList/CardList.jsx";
+import AddCard from "../AddCard/AddCard.jsx";
+import Modal from "../Modal/Modal.jsx";
 
 
 

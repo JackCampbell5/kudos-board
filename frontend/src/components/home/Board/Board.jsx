@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './Board.css'
 import PropTypes, { func } from 'prop-types';
-import {catTranslate} from './../../utils/utils'
+import {catTranslate} from '../../../utils/utils'
 import { FaRegTrashAlt } from "react-icons/fa";
 
 

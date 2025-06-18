@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './TopHome.css'
 import PropTypes from 'prop-types';
-import Search from './../Search'
+import Search from '../../allPages/Search/Search'
 
 
 

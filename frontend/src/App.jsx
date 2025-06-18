@@ -3,10 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import MainHeader from './components/MainHeader'
-import HomePage from './components/home/HomePage'
-import BoardPage from './components/board/BoardPage'
-import Footer from './components/Footer'
+import MainHeader from './components/allPages/MainHeader/MainHeader'
+import HomePage from './components/home/HomePage/HomePage'
+import BoardPage from './components/board/BoardPage/BoardPage'
+import Footer from './components/allPages/Footer/Footer'
 
 
 function App() {
