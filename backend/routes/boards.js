@@ -5,14 +5,15 @@ const express = require('express')
 const router = express.Router()
 
   router.get("/", async (req, res) => {
-    const findBoards = await prisma.Board.findMany()
-    console.log(findBoards)
+    console.log(process.env.DATABASE_URL);
+    console.log("HIiiiiiiiii");
+    const findBoards = await prisma.board.findMany()
     res.json(findBoards);
   });
 
   router.get("/:boardID/cards", async (req, res) => {
     const { boardID } = req.params
-    const findCards = await prisma.Card.findMany({
+    const findCards = await prisma.card.findMany({
       where: {
         boardId: parseInt(boardID),
       },
@@ -25,7 +26,7 @@ const router = express.Router()
     const newBoard = {
         ...boardData,
     }
-    const createBoard = await prisma.Board.create({
+    const createBoard = await prisma.board.create({
       data: newBoard});
     res.status(201).json(createBoard)
   })
@@ -38,7 +39,7 @@ const router = express.Router()
         ...cardData,
     }
 
-    const createCard = await prisma.Card.create({
+    const createCard = await prisma.card.create({
       data: newCard});
     res.status(201).json(createCard)
   })
@@ -47,7 +48,14 @@ const router = express.Router()
   router.delete('/delete/:boardID', async (req, res) => {
     const { boardID } = req.params
     try{
-    const deleteOne = await prisma.Board.delete({
+
+    await prisma.card.deleteMany({
+      where: {
+        boardId: parseInt(boardID),
+      },
+    });
+
+    await prisma.board.delete({
       where: {
         id: parseInt(boardID),
       },
@@ -64,7 +72,7 @@ const router = express.Router()
     const { boardID,cardID } = req.params
 
     try{
-      const deleteOne = await prisma.Card.delete({
+      const deleteOne = await prisma.card.delete({
         where: {
           id: parseInt(cardID),
         },
@@ -80,7 +88,7 @@ const router = express.Router()
   router.put('/:boardID/cards/:cardID/voteUp', async (req, res) => {
     const { boardID,cardID } = req.params
     try{
-    const updateOne = await prisma.Card.update({
+    const updateOne = await prisma.card.update({
       where: {
         id: parseInt(cardID),
       },

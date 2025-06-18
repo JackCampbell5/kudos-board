@@ -15,19 +15,19 @@ datasource db {
 }
 
 
-model Board {
+model board {
   id    Int     @id @unique @default(autoincrement())
   title        String
   category     String
   author       String?
   icon         String
   description  String
-  cards        Card[]
+  cards        card[]
 }
 
-model Card {
+model card {
   id          Int     @id @unique @default(autoincrement())
-  board       Board @relation(fields: [boardId], references: [id])
+  board       board @relation(fields: [boardId], references: [id])
   boardId     Int
   title       String
   message     String
