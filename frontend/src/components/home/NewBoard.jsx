@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import './NewBoard.css'
-import PropTypes from 'prop-types';
+import PropTypes, { func } from 'prop-types';
 import { useState } from "react";
 import {convertToTitleCase} from './../../utils/utils.js'
+import Giphy from "../Giphy.jsx";
 
 
 
@@ -14,26 +15,32 @@ function NewBoard({addNewBoard}) {
     function swapActive() {
         setNewActive(!newActive)
     }
+
+    const [gif, setGif] = useState("");
+
+
     const defaultBoard = {
         title: "",
         category: "recent",
         author: "",
-        icon: "",
         description: "",
     }
     //TODO Make icon use the giphy component I will be creating
     const [newBoard, setNewBoard] = useState(defaultBoard);
     function submit() {
-        for (const key in newBoard) {
-        if(newBoard[key] === ""&&key !=="author") {
+        let newHelper = ({...newBoard, icon: gif})
+        for (const key in newHelper) {
+        if(newHelper[key] === ""&&key !=="author") {
             alert("Please fill out all fields");
             //TODO make all felids red when they are not filled out and submit is clicked
             return;
         }
         }
         swapActive();
-        addNewBoard(newBoard);
+        addNewBoard(newHelper);
     }
+
+
 
   return (
     // JSX code for rendering the component
@@ -56,9 +63,11 @@ function NewBoard({addNewBoard}) {
                 }
                 </div>
                 )})}
+                <Giphy gif={gif} setGifHelper={setGif} />
                 <button className="submitButton"onClick={submit}>Submit</button>
             </div>
         ) : null}
+
 
     </div>
   );

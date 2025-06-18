@@ -4,10 +4,13 @@ import './AddCard.css'
 import PropTypes from 'prop-types';
 import { useState } from "react";
 import {convertToTitleCase} from './../../utils/utils.js'
+import Giphy from "../Giphy.jsx";
 
 
 
 function AddCard({addNewCard}) {
+    const [gif, setGif] = useState("");
+
   const [newActive, setNewActive] = useState(false);
   function swapActive() {
       setNewActive(!newActive)
@@ -16,24 +19,25 @@ function AddCard({addNewCard}) {
       title: "",
       message: "",
       author: "",
-      icon: "",
   }
   console.log(defaultCard)
   //TODO Make icon use the giphy component I will be creating
 
   const [newCard, setNewCard] = useState(defaultCard);
-  console.log(newCard)
   function submit() {
-      console.log(newCard);
-      for (const key in newCard) {
-      if(newCard[key] === "") {
+    console.log(gif)
+    let newHelper = ({...newCard, icon: gif})
+      for (const key in newHelper) {
+      if(newHelper[key] === "") {
           alert("Please fill out all fields");
           //TODO make all felids red when they are not filled out and submit is clicked
           return;
       }
       }
       swapActive();
-      addNewCard(newCard);
+      console.log(newHelper)
+      addNewCard(newHelper);
+      setNewCard(defaultCard);
   }
 
 return (
@@ -42,13 +46,14 @@ return (
       <button className="createNewCard" onClick={swapActive}>{newActive ? "Hide":"New Card"}</button>
       {newActive ? (
           <div className="newCardMaker">
-              {Object.keys(newCard).map(key =>  { const obj = defaultCard[key];
+              {Object.keys(newCard).map(key =>  { const obj = newCard[key];
               return(
               <div className="addCardDiv" key={key}>
                   <p className="addCardLabel">{convertToTitleCase(key)}:</p>
                   <input type="text" className="addCardInput" name={key} onChange={(e)=> setNewCard({...newCard, [e.target.name]: e.target.value})} />
               </div>
               )})}
+                <Giphy gif={gif} setGifHelper={setGif} />
               <button className="submitButton"onClick={submit}>Submit</button>
           </div>
       ) : null}

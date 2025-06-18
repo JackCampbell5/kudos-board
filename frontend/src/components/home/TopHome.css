@@ -17,31 +17,6 @@ h1{
     margin: 20px;
 }
 
-/* The div conatining all the search elements */
-.search{
-    border: 2px solid #cf8ba2;
-    padding: 1px 1px 1px 3px;
-    margin: 10px;
-    border-radius: 10px;
-    width: fit-content;
-}
-.TopHome input{
-    width: 30vw;
-    height: 35px;
-    font-size: 20px;
-    border-radius: 10px;
-    border: 0px solid  #cf8ba2;
-    background-color:  #ffbad1;
-    color: #3e0025;
-}
-.TopHome input::placeholder{
-    color: #8d7383;
-    padding: 0px 10px;
-}
-.TopHome input:hover{
-    background-color: #e8acc0;
-}
-
 .filter .selected{
     background-color: #ff64cb;
     border: 5px solid #bc4996;

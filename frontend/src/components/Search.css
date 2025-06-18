@@ -1,0 +1,30 @@
+/* The div conatining all the search elements */
+.Search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.search{
+    border: 2px solid #cf8ba2;
+    padding: 1px 1px 1px 3px;
+    margin: 10px;
+    border-radius: 10px;
+    width: fit-content;
+}
+.Search input{
+    width: 30vw;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 0px solid  #cf8ba2;
+    background-color:  #ffbad1;
+    color: #3e0025;
+}
+.Search input::placeholder{
+    color: #8d7383;
+    padding: 0px 10px;
+}
+.Search input:hover{
+    background-color: #e8acc0;
+}

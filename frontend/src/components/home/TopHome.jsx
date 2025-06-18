@@ -2,24 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './TopHome.css'
 import PropTypes from 'prop-types';
+import Search from './../Search'
 
 
 
-function TopHome({data,searchTerm,setSearchTerm,search, filterType, setFilterType}) {
-  function submitSearch(newData){
-    setSearchTerm(newData.target.value);
-  }
+function TopHome({searchTerm,setSearchTerm,search, filterType, setFilterType}) {
   return (
     // JSX code for rendering the component
     <div className="TopHome">
-        <div className="search">
-          <form onSubmit={search}>
-              <input id="search-box" name="dataInput" value={searchTerm} onChange={submitSearch} placeholder="Search Boards"/>
-              <button type="submit" id="submit-button">Search</button>
-              <button className="search-button" id="clear-button" onClick={()=>setSearchTerm("")}>Clear</button>
-          </form>
-        </div>
-        <div className="filter">
+      <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} search={search} presetText="Search Boards"/>
+      <div className="filter">
         <button className={filterType === "all"?"selected":"unselected"} onClick={()=>setFilterType("all")}>Home</button>
         <button className={filterType === "recent"?"selected":"unselected"} onClick={()=>setFilterType("recent")}>Recent</button>
         <button className={filterType === "celebration"?"selected":"unselected"} onClick={()=>setFilterType("celebration")}>Celebration</button>

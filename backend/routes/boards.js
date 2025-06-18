@@ -77,7 +77,7 @@ let kudosCards = [
     title: "Great Teamwork",
     message: "Thanks for collaborating so effectively on the project!",
     author: "Alice",
-    gif: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
+    icon: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
     upvoteCount: 15
   },
   {
@@ -85,7 +85,7 @@ let kudosCards = [
     title: "Outstanding Leadership",
     message: "Your guidance has been invaluable to the team.",
     author: "Bob",
-    gif: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
+    icon: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
     upvoteCount: 20
   },
   {
@@ -93,7 +93,7 @@ let kudosCards = [
     title: "Creative Problem Solving",
     message: "Your innovative solutions helped us overcome major challenges.",
     author: "Charlie",
-    gif: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
+    icon: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
     upvoteCount: 10
   },
   {
@@ -101,7 +101,7 @@ let kudosCards = [
     title: "Excellent Communication",
     message: "Your clear communication made a big difference.",
     author: "David",
-    gif: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
+    icon: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
     upvoteCount: 12
   },
   {
@@ -109,7 +109,7 @@ let kudosCards = [
     title: "Inspiring Dedication",
     message: "Your dedication to the project is truly inspiring.",
     author: "Eve",
-    gif: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
+    icon: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
     upvoteCount: 18
   },
   {
@@ -117,7 +117,7 @@ let kudosCards = [
     title: "Remarkable Initiative",
     message: "Your initiative in tackling tasks is commendable.",
     author: "Frank",
-    gif: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
+    icon: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
     upvoteCount: 14
   },
   {
@@ -125,7 +125,7 @@ let kudosCards = [
     title: "Positive Attitude",
     message: "Your positive attitude is contagious and uplifting.",
     author: "Grace",
-    gif: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
+    icon: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
     upvoteCount: 22
   },
   {
@@ -133,7 +133,7 @@ let kudosCards = [
     title: "Exceptional Support",
     message: "Your support has been crucial to our success.",
     author: "Hannah",
-    gif: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
+    icon: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
     upvoteCount: 17
   },
   {
@@ -141,7 +141,7 @@ let kudosCards = [
     title: "Amazing Creativity",
     message: "Your creativity has brought fresh ideas to the table.",
     author: "Ian",
-    gif: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
+    icon: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
     upvoteCount: 19
   },
   {
@@ -149,7 +149,7 @@ let kudosCards = [
     title: "Fantastic Problem Solver",
     message: "Your problem-solving skills are exceptional.",
     author: "Jack",
-    gif: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
+    icon: "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmZqb2Z1eWFwODJqY3BzYjB5amdvdWIyOTdmMmxvaGYxcXp2OGQ5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ef72To2kJgyAC1FdxK/giphy.gif",
     upvoteCount: 21
   }
 ];
