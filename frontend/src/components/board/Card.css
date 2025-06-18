@@ -1,29 +1,76 @@
 .Card{
     width: 200px;
-    height: 375px;
+    height: 400px;
     margin: 10px;
     padding: 5px;
-    border: #460075 solid 2px;
+    border: #bd7d92 solid 2px;
     border-radius: 10px;
     text-align: center;
     transition: all 0.2s linear;
 }
+.Card:hover{
+    background-color: #ffb3cc;
+}
+.Card .imgDiv{
+    /* Center Image in box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
 .Card img{
-    width: 200px;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
 }
 .Card p{
     margin: 5px;
 }
-.title{
+.Card .title{
     font-size: 150%;
     height: 15%;
     margin: 10px;
 }
 
-.message{
+.Card .message{
     font-size: 75%;
     height: 10%;
 }
 .Card button{
  font-size: small;
+}
+
+.upVoteDiv{
+    width: 100%;
+}
+.upVoteDiv button{
+    font-size: 90%;
+    padding: 4px;
+    margin: 10px;
+}
+
+.cardButton{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* height: 15%; */
+}
+
+.Card .delete{
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    margin: 0px 10px;
+    background-color: #ffa9c5;
+    border: #c97490 solid 2px;
+    border-radius: 5px;
+    }
+
+.Card svg{
+    width: 30px;
+    height: 30px;
+}
+
+.Card .delete:hover{
+    background-color: red;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './Card.css'
 import PropTypes, { func } from 'prop-types';
+import { FaRegTrashAlt } from "react-icons/fa";
 
 
 
@@ -22,13 +23,19 @@ function upvoteCardsHelp(e){
   return (
     // JSX code for rendering the component
     <div className="Card">
+      <div className="imgDiv">
         <img className="icon"src={icon}/>
-        <p className="title">{title}</p>
-        <p className="message">{message}</p>
-        <p className="author">{author}</p>
+      </div>
+      <p className="title">{title}</p>
+      <p className="message">{message}</p>
+      <p className="author">{author}</p>
+      <div className="cardButton">
+        <div className="upVoteDiv">
         <button className="upvoteCount" onClick={upvoteCardsHelp}>Upvotes: {upvoteCount}</button>
-        <button className="delete" onClick={deleteCardHelp}>Delete</button>
-    </div>
+        </div>
+        <div className="delete" onClick={deleteCardHelp}><FaRegTrashAlt /></div>
+      </div>
+  </div>
   );
 }
 
