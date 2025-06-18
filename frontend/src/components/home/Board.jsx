@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import './Board.css'
 import PropTypes, { func } from 'prop-types';
 import {catTranslate} from './../../utils/utils'
+import { FaRegTrashAlt } from "react-icons/fa";
 
 
 
@@ -18,17 +19,23 @@ function Board({data,clickBoard,deleteBoard}) {
         deleteBoard(id);
     }
     function clickBoardHelp(e){
-      clickBoard(id);
+      clickBoard([id,title]);
     }
   return (
     // JSX code for rendering the component
     <div className="Board" onClick={clickBoardHelp}>
-        <img className="icon" src={icon} alt={"Playlist Icon for" + title}/>
+        <div className="imgDiv">
+          <img className="icon" src={icon} alt={"Playlist Icon for" + title}/>
+        </div>
         <p className="title">{title}</p>
-        <p className="category">{catTranslate(category)}</p>
+        <div className="authorDiv">
         {author!==""?<p className="author">By: {author}</p>:null}
-        <p className="description">{description}</p>
-        <button className="delete" onClick={deleteBoardHelp}>Delete</button>
+        </div>
+        <p className="category">{catTranslate(category)}</p>
+        <div className="boardBottom">
+          <p className="description">{description}</p>
+        <div className="delete" onClick={deleteBoardHelp}><FaRegTrashAlt /></div>
+        </div>
     </div>
   );
 }

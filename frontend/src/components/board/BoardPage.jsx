@@ -13,24 +13,26 @@ import Modal from "./Modal";
 
 
 function BoardPage({activePage}) {
+  let [id,title] = activePage
 
   const [cardList, setCardList] = useState([]);
-  useEffect(()=>{fetchCards(activePage, setCardList)},[]);
+  useEffect(()=>{fetchCards(id, setCardList)},[]);
   function addCard(board){
     setCardList(listData => [...listData, board]);
   }
 
   function addNewCard(newCard){
-    createCardAPI(activePage,newCard, addCard)
+    createCardAPI(id,newCard, addCard)
   }
   return (
     // JSX code for rendering the component
     <div className="BoardPage">
-        <h1>{activePage}</h1>
-        <TopBoard/>
-        <AddCard addNewCard={addNewCard}/>
-        <CardList cardList={cardList} id={activePage} setCardList={setCardList}/>
-        <Modal/>
+      <header>
+        <h1>{title}</h1>
+      </header>
+      <AddCard addNewCard={addNewCard}/>
+      <CardList cardList={cardList} id={id} setCardList={setCardList}/>
+      <Modal/>
     </div>
   );
 }

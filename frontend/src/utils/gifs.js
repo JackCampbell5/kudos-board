@@ -49,10 +49,10 @@ export async function searchGifts(searchKey, after){
 
 
 function extractGifUrl(gifList) {
-    console.log(gifList);
     let retGifList = [];
     for(let a of gifList) {
         retGifList.push(`https://media.giphy.com/media/${a.id}/giphy.gif`);
+        console.log(`https://media.giphy.com/media/${a.id}/giphy.gif`);
     }
     return retGifList;
 

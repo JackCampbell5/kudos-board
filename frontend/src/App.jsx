@@ -10,14 +10,17 @@ import Footer from './components/Footer'
 
 
 function App() {
-  const [activePage, setActivePage] = useState("")
-
+  const [activePage, setActivePage] = useState(["",""])
+  const checkFirstElementEmpty = (activePage) => {
+    let [hi, _] = activePage;
+    return hi === "";
+  };
   return (
    <div className='App'>
-    <button onClick={() => setActivePage("")}>Home</button>
+    <button onClick={() => setActivePage(["",""])}>Home</button>
     {/* Make into the Main header eventually  */}
     <MainHeader />
-    {activePage === ""?
+    {checkFirstElementEmpty(activePage)?
     <HomePage setActivePage={setActivePage}/>:
     <BoardPage activePage={activePage}/>}
     <Footer />
