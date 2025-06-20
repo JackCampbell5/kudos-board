@@ -139,7 +139,7 @@ let boardsToImport = [
   },
   {
       title: "Recent Achievements",
-      category: "recent",
+      category: "celebration",
       author: "David Brown",
       icon: "https://media.giphy.com/media/Vi5TUmZz8LZb95j2xb/giphy.gif",
       description: "Highlighting the most recent achievements and milestones reached by our team.",
@@ -224,7 +224,7 @@ let boardsToImport = [
   },
   {
       title: "Weekly Highlights",
-      category: "recent",
+      category: "celebration",
       author: "Henry White",
       icon: "https://media.giphy.com/media/3ohs7KViF6rA4aan5u/giphy.gif",
       description: "A recap of the week's highlights and key moments worth celebrating.",

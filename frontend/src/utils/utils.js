@@ -122,9 +122,45 @@ export async function deleteCardAPI(boardID, cardID,after) {
 }
 
 
-export async function fetchBoard(id, after){
-
+export async function addPinCardAPI(boardID,cardID,setToafter,after) {
+    await fetch(`${boardLink}${boardID}/cards/${cardID}/pin/${setToafter}`,{method: 'PUT', headers: {'Content-Type': 'application/json'}})
+    .then(response => {
+        if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json(); // Parse JSON data from the response
+    })
+    .then(data => {
+        // Update UI or perform other actions with the data
+        after(cardID,data);
+    })
+    .catch(error => {
+        // Handle error
+        console.error('Error fetching boards:', error);
+        // Display an error message or retry the request
+    });
 }
+
+export async function removePinCardAPI(boardID,cardID,after) {
+    await fetch(`${boardLink}${boardID}/cards/${cardID}/unpin`,{method: 'PUT', headers: {'Content-Type': 'application/json'}})
+    .then(response => {
+        if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json(); // Parse JSON data from the response
+    })
+    .then(data => {
+        // Update UI or perform other actions with the data
+        after(cardID,data);
+    })
+    .catch(error => {
+        // Handle error
+        console.error('Error fetching boards:', error);
+        // Display an error message or retry the request
+    });
+}
+
+
 
 
 export function catTranslate(category){

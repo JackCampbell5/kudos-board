@@ -56,17 +56,16 @@
 .upVoteDiv button{
     font-size: 90%;
     padding: 4px;
-    margin: 10px;
 }
 
 .cardButton{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-end;
-    /* height: 15%; */
+    height: 12%;
 }
 
-.Card .delete{
+.Card .cardBackground{
     width: 30px;
     height: 30px;
     padding: 4px;
@@ -76,11 +75,11 @@
     border-radius: 5px;
 }
 
-#light .Card .delete{
+#light .Card .cardBackground{
     background-color: #ffa9c5;
     border: #c97490 solid 2px;
 }
-#dark .Card .delete{
+#dark .Card .cardBackground{
     background-color: #56002c;
     border: #8b364f solid 2px;
 }
@@ -90,9 +89,17 @@
     height: 30px;
 }
 
-#light .Card .delete:hover{
+#light .Card #delete:hover{
     background-color: red;
 }
 #dark .Card .delete:hover{
     background-color: rgb(134, 0, 0);
+}
+
+
+#light .Card #pinned:hover{
+    background-color: #ff7ba7;
+}
+#dark .Card #pinned:hover{
+    background-color: #880044;
 }

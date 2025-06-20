@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "card" ADD COLUMN     "pinned" INTEGER NOT NULL DEFAULT 0;

@@ -17,13 +17,13 @@ function BoardList({listData, setListData, searchTerm, filterType, setActivePage
     <div className="BoardList">
         <div id="boards">
       {listData.map(obj =>  {
-            if((filterType==="all"||obj.category===filterType)&&(obj.title.toLowerCase().includes(searchTerm)||searchTerm==="")){ num++;
+            if((filterType==="all"||filterType==="recent"||obj.category===filterType)&&(obj.title.toLowerCase().includes(searchTerm)||searchTerm==="")&&((num++>(listData.length-7))||(filterType!=="recent"))){
           return(<Board key={obj.id} data={obj} clickBoard={setActivePage}  deleteBoard={(deleteBoard)}/>)
       }else{<p>{obj.id}</p>}
       })}
       </div>
       <div id="boardTotal">
-        <p id="boardTotalNum">{num} </p>
+        <p id="boardTotalNum">{filterType==="recent"?Math.min(6,listData.length):num} </p>
         <p id="boardTotalLabel"> Boards Displayed</p>
       </div>
     </div>
