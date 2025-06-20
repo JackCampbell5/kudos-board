@@ -12,7 +12,6 @@ export async function fetchGifts(after){
         })
         .then(data => {
             // Handle successful response
-            console.log('Boards:', data);
             // Update UI or perform other actions with the data
             let result = extractGifUrl(data.data);
             after(result);
@@ -34,8 +33,6 @@ export async function searchGifts(searchKey, after){
         return response.json(); // Parse JSON data from the response
     })
     .then(data => {
-        // Handle successful response
-        console.log('Boards:', data);
         // Update UI or perform other actions with the data
         let result = extractGifUrl(data.data);
         after(result);
@@ -52,7 +49,6 @@ function extractGifUrl(gifList) {
     let retGifList = [];
     for(let a of gifList) {
         retGifList.push(`https://media.giphy.com/media/${a.id}/giphy.gif`);
-        console.log(`https://media.giphy.com/media/${a.id}/giphy.gif`);
     }
     return retGifList;
 

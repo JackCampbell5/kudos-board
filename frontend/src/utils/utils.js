@@ -1,7 +1,6 @@
 
 const boardLink = import.meta.env.VITE_BACKEND_API;
 export async function fetchBoards(after){
-    console.log(boardLink);
     await fetch(`${boardLink}`)
     .then(response => {
         if (!response.ok) {
@@ -10,8 +9,6 @@ export async function fetchBoards(after){
         return response.json(); // Parse JSON data from the response
     })
     .then(data => {
-        // Handle successful response
-        console.log('Boards:', data);
         // Update UI or perform other actions with the data
         after(data);
     })
@@ -31,8 +28,6 @@ export async function fetchCards(id,after){
         return response.json(); // Parse JSON data from the response
     })
     .then(data => {
-        // Handle successful response
-        console.log('Cards:', data);
         // Update UI or perform other actions with the data
         after(data);
     })
@@ -45,7 +40,6 @@ export async function fetchCards(id,after){
 
 
 export async function deleteBoardAPI(id,after) {
-    console.log("Deleting board with id: " + id);
     await fetch(`${boardLink}delete/${id}`,{method: 'DELETE'})
     .then(response => {
         if (!response.ok) {
@@ -65,8 +59,6 @@ export async function createBoardAPI(info,after) {
         return response.json(); // Parse JSON data from the response
     })
     .then(data => {
-        // Handle successful response
-        console.log('Boards:', data);
         // Update UI or perform other actions with the data
         after(data);
     })
@@ -87,8 +79,6 @@ export async function createCardAPI(id,info,after) {
         return response.json(); // Parse JSON data from the response
     })
     .then(data => {
-        // Handle successful response
-        console.log('Boards:', data);
         // Update UI or perform other actions with the data
         after(data);
     })
@@ -109,8 +99,6 @@ export async function addVoteCardAPI(boardID,cardID,after) {
         return response.json(); // Parse JSON data from the response
     })
     .then(data => {
-        // Handle successful response
-        console.log('Card With More votes:', data);
         // Update UI or perform other actions with the data
         after(cardID,data);
     })
@@ -123,7 +111,6 @@ export async function addVoteCardAPI(boardID,cardID,after) {
 
 
 export async function deleteCardAPI(boardID, cardID,after) {
-    console.log("Deleting card with id: " + id);
     await fetch(`${boardLink}${boardID}/cards/${cardID}/delete`,{method: 'DELETE'})
     .then(response => {
         if (!response.ok) {

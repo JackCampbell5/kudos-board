@@ -32,7 +32,7 @@ function BoardPage({activePage}) {
       </header>
       <AddCard addNewCard={addNewCard}/>
       <CardList cardList={cardList} id={id} setCardList={setCardList}/>
-      <Modal/>
+      {/* <Modal/> */}
     </div>
   );
 }
