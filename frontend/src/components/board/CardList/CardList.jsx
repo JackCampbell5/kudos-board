@@ -14,7 +14,6 @@ function CardList({cardList,setCardList,id}) {
     console.log("Comments",cardID);
   }
   function upvoteCards(cardID){
-    console.log(cardID);
     addVoteCardAPI(id,cardID,updateCard)
   }
   function deleteCard(cardID){
@@ -23,7 +22,6 @@ function CardList({cardList,setCardList,id}) {
   function updateCard(cardID, cardData){
     if(cardData){
       let result = cardList.map(card => card.id===cardID?cardData:card);
-      console.log(result);
       setCardList(result);
     }
 

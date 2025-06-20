@@ -20,12 +20,10 @@ function AddCard({addNewCard}) {
       message: "",
       author: "",
   }
-  console.log(defaultCard)
   //TODO Make icon use the giphy component I will be creating
 
   const [newCard, setNewCard] = useState(defaultCard);
   function submit() {
-    console.log(gif)
     let newHelper = ({...newCard, icon: gif})
       for (const key in newHelper) {
       if(newHelper[key] === "") {
@@ -35,7 +33,6 @@ function AddCard({addNewCard}) {
       }
       }
       swapActive();
-      console.log(newHelper)
       addNewCard(newHelper);
       setNewCard(defaultCard);
   }
