@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useNavigate } from "react-router";
@@ -17,6 +16,7 @@ function App() {
 
 
   const [activePage, setActivePage] = useState(["",""])
+  const [darkMode, setDarkMode] = useState(false)
   function changeActivePage(newActivePage){
     let [page,_] = newActivePage
   if (page === ""){
@@ -31,7 +31,8 @@ function App() {
     return hi === "";
   };
   return (
-   <div className='App'>
+   <div className='App' id={darkMode?"dark":"light"}>
+    <button onClick={() => setDarkMode(!darkMode)}>Dark Mode</button>
     {!checkFirstElementEmpty(activePage)? <button onClick={() => changeActivePage(["",""])}>Home</button> :null}
     {/* Make into the Main header eventually  */}
     {/* <MainHeader /> */}

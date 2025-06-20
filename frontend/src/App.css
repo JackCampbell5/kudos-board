@@ -1,3 +1,35 @@
 .App{
     text-align: center;
+    padding: 50px 0px 100px 0px;
+}
+
+
+#light{
+    color: #3e0025;
+    background-color: #ffd3e2;
+}
+#light button {
+    color: #3e0025;
+    background-color: #ffa9c5;
+    border: 3px solid #ff8bb2;
+    }
+#light button:hover {
+    border-color: #ff6498;
+    background-color: #ff9bbc;
+}
+
+
+
+#dark{
+    color: #ffd3e2;
+    background-color: #3e0025;
+}
+#dark button {
+    color: #ffd3e2;
+    background-color: #560043;
+    border: 3px solid #740046;
+    }
+#dark button:hover {
+    border-color: #9b0072;
+    background-color: #64004e;
 }

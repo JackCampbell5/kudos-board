@@ -1,6 +1,6 @@
 import { func } from "prop-types";
 
-const GiphyAPIKey = import.meta.env.VITE_GIPHY_API_KEY+"/boards/";
+const GiphyAPIKey = import.meta.env.VITE_GIPHY_API_KEY;
 
 export async function fetchGifts(after){
         await fetch('https://api.giphy.com/v1/gifs/trending?api_key=' + GiphyAPIKey + '&limit=10&rating=g&lang=en')
@@ -25,6 +25,7 @@ export async function fetchGifts(after){
 
 
 export async function searchGifts(searchKey, after){
+    console.log(GiphyAPIKey)
     await fetch(`https://api.giphy.com/v1/gifs/search?api_key=${GiphyAPIKey}&q=${searchKey}&limit=10&rating=g&lang=en`)
     .then(response => {
         if (!response.ok) {

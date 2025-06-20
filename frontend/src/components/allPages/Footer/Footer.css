@@ -3,11 +3,21 @@
     bottom: 0%;
 }
  /* My email */
-.authorName{
-    color: rgb(155, 0, 106);
+#light .authorName{
+    color: #9b006a
+}
+
+#dark .authorName{
+    color: #ff64e3
 }
 /* The Link that is my email */
 .Footer a{
-    color:  rgb(104, 0, 71);
     margin: 0px 50px;
+}
+
+#light .Footer a{
+    color:  #680047;
+}
+#dark .Footer a{
+    color:  #ff97da;
 }

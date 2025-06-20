@@ -3,14 +3,24 @@
     height: 400px;
     margin: 10px;
     padding: 5px;
-    border: #bd7d92 solid 2px;
     border-radius: 10px;
     text-align: center;
     transition: all 0.2s linear;
 }
-.Card:hover{
+#light .Card{
+    border: #bd7d92 solid 2px;
+}
+#dark .Card{
+    border: #824252 solid 2px;
+}
+
+#light .Card:hover{
     background-color: #ffb3cc;
 }
+#dark .Card:hover{
+    background-color: #4c0026;
+}
+
 .Card .imgDiv{
     /* Center Image in box */
     display: flex;
@@ -64,13 +74,25 @@
     background-color: #ffa9c5;
     border: #c97490 solid 2px;
     border-radius: 5px;
-    }
+}
+
+#light .Card .delete{
+    background-color: #ffa9c5;
+    border: #c97490 solid 2px;
+}
+#dark .Card .delete{
+    background-color: #56002c;
+    border: #8b364f solid 2px;
+}
 
 .Card svg{
     width: 30px;
     height: 30px;
 }
 
-.Card .delete:hover{
+#light .Card .delete:hover{
     background-color: red;
+}
+#dark .Card .delete:hover{
+    background-color: rgb(134, 0, 0);
 }
