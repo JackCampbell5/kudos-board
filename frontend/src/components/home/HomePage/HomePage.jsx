@@ -34,9 +34,13 @@ function HomePage({data,setActivePage}) {
     // JSX code for rendering the component
     <div className="HomePage">
         <h1>Home</h1>
-        <TopHome searchTerm={searchTerm} setSearchTerm={setSearchTerm} search={search} filterType={filterType} setFilterType={setFilterType}/>
-        <NewBoard addNewBoard={addNewBoard}/>
-        <BoardList listData={listData} setListData={setListData} searchTerm={searchGo} filterType={filterType} setActivePage={setActivePage} />
+        <header>
+          <TopHome searchTerm={searchTerm} setSearchTerm={setSearchTerm} search={search} filterType={filterType} setFilterType={setFilterType}/>
+        </header>
+        <main>
+          <NewBoard addNewBoard={addNewBoard}/>
+          <BoardList listData={listData} setListData={setListData} searchTerm={searchGo} filterType={filterType} setActivePage={setActivePage} />
+        </main>
     </div>
   );
 }

@@ -10,7 +10,7 @@ function TopHome({searchTerm,setSearchTerm,search, filterType, setFilterType}) {
     <div className="TopHome">
       <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} search={search} presetText="Search Boards"/>
       <div className="filter">
-        <button className={filterType === "all"?"selected":"unselected"} onClick={()=>setFilterType("all")}>Home</button>
+        <button className={filterType === "all"?"selected":"unselected"} onClick={()=>setFilterType("all")}>All</button>
         <button className={filterType === "recent"?"selected":"unselected"} onClick={()=>setFilterType("recent")}>Recent</button>
         <button className={filterType === "celebration"?"selected":"unselected"} onClick={()=>setFilterType("celebration")}>Celebration</button>
         <button className={filterType === "thanks"?"selected":"unselected"} onClick={()=>setFilterType("thanks")}>Thank You</button>

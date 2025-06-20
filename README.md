@@ -12,7 +12,7 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
 
 ##### Home Page
 
-- [ ] **Home Page Display**
+- [x] **Home Page Display**
   - [x] Home page includes the following features:
     - [x] Header
     - [x] Banner
@@ -65,7 +65,7 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
     - [x] Message
     - [x] Gif
     - [x] Number of upvotes
-    - [ ] Delete button
+    - [x] Delete button
 - [x] **Add New Card**
   - [x] Users can make a new card associated with the current board.
   - [x] To successfully create a new card, users must specify the following:
@@ -73,16 +73,16 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
     - [ ] A gif users can search for and select within the form using the [GIPHY API](https://developers.giphy.com/docs/api/) (required).
   - [ ] Users are given the option to specify the author of the card.
   - [x] When the new card is successfully created, it appears in the grid of cards.
-- [ ] **Upvote Card**
-  - [ ] Users can upvote a card.
-  - [ ] Update the vote count on the card tile when a user clicks the upvote icon.
-  - [ ] When the upvote icon is clicked the upvote count increases by 1.
-  - [ ] A user can upvote a card multiple times.
+- [x] **Upvote Card**
+  - [x] Users can upvote a card.
+  - [x] Update the vote count on the card tile when a user clicks the upvote icon.
+  - [x] When the upvote icon is clicked the upvote count increases by 1.
+  - [x] A user can upvote a card multiple times.
 - [x] **Delete Card**
   - [x] Users can delete cards.
   - [x] When the user clicks the delete button for a card, the card disappears from the grid of cards.
-- [ ] **Deployment**
-  - [ ] Website is deployed via Render.
+- [x] **Deployment**
+  - [x] Website is deployed via Render.
   - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough.
 
 ####  Stretch Features
@@ -115,23 +115,23 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
   - [x] The chosen mode (light or dark) persists when navigating from home page to board pages and vice versa.
   - [x] When the user first visits the site the theme defaults to light mode.
   - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast in both light and dark mode. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it.
-- [ ] **Pinned Cards**
-  - [ ] Users can pin a card to the top of the board.
-  - [ ] A Pin button is displayed on each card.
-  - [ ] When the user clicks the Pin button of an unpinned card:
-    - [ ] The card moves to the top of the grid view for that board.
-    - [ ] There is some visual feedback to indicate a card's pin status (e.g., a pin icon, a border highlight).
-    - [ ] The pin action is saved so that the card remains pinned after page refreshes.
-  - [ ] When the user clicks the Pin button of a pinned card:
-    - [ ] The card returns to its original position in the grid based on its creation time or to the end of the grid.
-    - [ ] The card's pin status (e.g., a pin icon or highlight)  is removed.
-    - [ ] The unpin action is saved so that the card remains unpinned after page refresh.
-  - [ ] Pinned cards always appear at the top of the board, above unpinned cards.
-  - [ ] If multiple cards are pinned, they maintain their pinned order based on the time they were pinned.
-    - [ ] More recent pins should appear first.
-- [ ] The pinned state of a card persists when:
-  - [ ] navigating away from and back to the board.
-  - [ ] refreshing the page.
+- [x] **Pinned Cards**
+  - [x] Users can pin a card to the top of the board.
+  - [x] A Pin button is displayed on each card.
+  - [x] When the user clicks the Pin button of an unpinned card:
+    - [x] The card moves to the top of the grid view for that board.
+    - [x] There is some visual feedback to indicate a card's pin status (e.g., a pin icon, a border highlight).
+    - [x] The pin action is saved so that the card remains pinned after page refreshes.
+  - [x] When the user clicks the Pin button of a pinned card:
+    - [x] The card returns to its original position in the grid based on its creation time or to the end of the grid.
+    - [x] The card's pin status (e.g., a pin icon or highlight)  is removed.
+    - [x] The unpin action is saved so that the card remains unpinned after page refresh.
+  - [x] Pinned cards always appear at the top of the board, above unpinned cards.
+  - [x] If multiple cards are pinned, they maintain their pinned order based on the time they were pinned.
+    - [x] More recent pins should appear first.
+- [x] The pinned state of a card persists when:
+  - [x] navigating away from and back to the board.
+  - [x] refreshing the page.
 
 
 
