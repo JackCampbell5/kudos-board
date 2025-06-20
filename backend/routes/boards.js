@@ -68,6 +68,7 @@ const router = express.Router()
 
   router.delete('/:boardID/cards/:cardID/delete', async (req, res) => {
     const { boardID,cardID } = req.params
+    console.log(cardID)
 
     try{
       const deleteOne = await prisma.card.delete({
@@ -99,6 +100,45 @@ const router = express.Router()
     })
     res.json(updateOne)
     res.status(204).send()
+  }catch{
+    res.status(404).send('Card not found')
+  }
+  })
+
+
+
+  router.put('/:boardID/cards/:cardID/pin/:pinNum', async (req, res) => {
+    const { boardID,cardID,pinNum } = req.params
+    try{
+    const updateOne = await prisma.card.update({
+      where: {
+        id: parseInt(cardID),
+      },
+
+      data: {
+        pinned: parseInt(pinNum)
+      },
+    })
+    res.json(updateOne)
+  }catch{
+    res.status(404).send('Card not found')
+  }
+  })
+
+
+  router.put('/:boardID/cards/:cardID/unpin', async (req, res) => {
+    const { boardID,cardID } = req.params
+    try{
+    const updateOne = await prisma.card.update({
+      where: {
+        id: parseInt(cardID),
+      },
+
+      data: {
+        pinned: 0
+      },
+    })
+    res.json(updateOne)
   }catch{
     res.status(404).send('Card not found')
   }

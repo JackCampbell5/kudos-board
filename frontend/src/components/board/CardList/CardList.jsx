@@ -7,7 +7,7 @@ import {deleteCardAPI,addVoteCardAPI} from '../../../utils/utils.js'
 
 
 
-function CardList({cardList,setCardList,id}) {
+function CardList({cardList,setCardList,id,pinned}) {
 
   let num =0;
   function openComments(cardID){
@@ -17,7 +17,7 @@ function CardList({cardList,setCardList,id}) {
     addVoteCardAPI(id,cardID,updateCard)
   }
   function deleteCard(cardID){
-    deleteCardAPI(id, cardID,()=>setCardList(cardList.filter(card => card.id !== id)) );
+    deleteCardAPI(id, cardID,()=>setCardList(cardList.filter(card => card.id !== cardID)) );
   }
   function updateCard(cardID, cardData){
     if(cardData){
@@ -26,13 +26,14 @@ function CardList({cardList,setCardList,id}) {
     }
 
   }
+
   return (
     // JSX code for rendering the component
     <div className="CardList">
         <div id="Cards">
         {cardList.map(obj =>  {
            num++;
-            return(<Card key={obj.id} data={obj} upvoteCards={upvoteCards} clickCard={openComments}  deleteCard={(deleteCard)}/>)
+            return(<Card key={obj.id} data={obj} upvoteCards={upvoteCards} clickCard={openComments}  deleteCard={(deleteCard)} pinned={pinned}/>)
        })}
         </div>
         <div id="CardTotal">

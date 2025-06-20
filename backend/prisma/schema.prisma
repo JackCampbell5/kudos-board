@@ -34,4 +34,5 @@ model card {
   author      String?
   icon        String
   upvoteCount Int @default(0)
+  pinned      Int @default(0)
 }
