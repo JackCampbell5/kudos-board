@@ -12,7 +12,7 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
 
 ##### Home Page
 
-- [ ] **Home Page Display**
+- [x] **Home Page Display**
   - [x] Home page includes the following features:
     - [x] Header
     - [x] Banner
@@ -65,7 +65,7 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
     - [x] Message
     - [x] Gif
     - [x] Number of upvotes
-    - [ ] Delete button
+    - [x] Delete button
 - [x] **Add New Card**
   - [x] Users can make a new card associated with the current board.
   - [x] To successfully create a new card, users must specify the following:
@@ -73,16 +73,16 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
     - [ ] A gif users can search for and select within the form using the [GIPHY API](https://developers.giphy.com/docs/api/) (required).
   - [ ] Users are given the option to specify the author of the card.
   - [x] When the new card is successfully created, it appears in the grid of cards.
-- [ ] **Upvote Card**
-  - [ ] Users can upvote a card.
-  - [ ] Update the vote count on the card tile when a user clicks the upvote icon.
-  - [ ] When the upvote icon is clicked the upvote count increases by 1.
-  - [ ] A user can upvote a card multiple times.
+- [x] **Upvote Card**
+  - [x] Users can upvote a card.
+  - [x] Update the vote count on the card tile when a user clicks the upvote icon.
+  - [x] When the upvote icon is clicked the upvote count increases by 1.
+  - [x] A user can upvote a card multiple times.
 - [x] **Delete Card**
   - [x] Users can delete cards.
   - [x] When the user clicks the delete button for a card, the card disappears from the grid of cards.
-- [ ] **Deployment**
-  - [ ] Website is deployed via Render.
+- [x] **Deployment**
+  - [x] Website is deployed via Render.
   - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough.
 
 ####  Stretch Features

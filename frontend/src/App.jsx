@@ -42,7 +42,9 @@ function App() {
           <Route path="/" element={<HomePage setActivePage={changeActivePage}/>} />
           <Route path="/board" element={<BoardPage activePage={activePage}/>} />
     </Routes>
-    <Footer />
+    <footer>
+      <Footer />
+    </footer>
   </div>
   )
 }

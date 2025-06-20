@@ -58,8 +58,10 @@ function BoardPage({activePage}) {
       <header>
         <h1>{title}</h1>
       </header>
-      <AddCard addNewCard={addNewCard}/>
-      <CardList cardList={cardList} id={id} setCardList={setCardList} pinned={pinned}/>
+      <main>
+        <AddCard addNewCard={addNewCard}/>
+        <CardList cardList={cardList} id={id} setCardList={setCardList} pinned={pinned}/>
+      </main>
       {/* <Modal/> */}
     </div>
   );
