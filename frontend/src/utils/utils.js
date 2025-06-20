@@ -1,5 +1,5 @@
 
-const boardLink = import.meta.env.VITE_BACKEND_API;
+const boardLink = import.meta.env.VITE_BACKEND_API+"/boards/";
 export async function fetchBoards(after){
     await fetch(`${boardLink}`)
     .then(response => {

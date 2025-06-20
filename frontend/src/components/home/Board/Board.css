@@ -3,15 +3,25 @@
     height: 400px;
     margin: 10px;
     padding: 5px;
-    border: #bd7d92 solid 2px;
     border-radius: 10px;
     text-align: center;
     transition: all 0.2s linear;
 }
 
-.Board:hover{
+#light .Board{
+    border: #bd7d92 solid 2px;
+}
+#dark .Board{
+    border: #824252 solid 2px;
+}
+
+#light .Board:hover{
     background-color: #ffb3cc;
 }
+#dark .Board:hover{
+    background-color: #4c0026;
+}
+
 
 .Board .imgDiv{
     /* Center Image in box */
@@ -56,9 +66,15 @@
 width: 30px;
 height: 30px;
 padding: 4px;
-background-color: #ffa9c5;
-border: #c97490 solid 2px;
 border-radius: 5px;
+}
+#light .Board .delete{
+    background-color: #ffa9c5;
+    border: #c97490 solid 2px;
+}
+#dark .Board .delete{
+    background-color: #56002c;
+    border: #8b364f solid 2px;
 }
 
 .Board svg{
@@ -66,6 +82,9 @@ border-radius: 5px;
     height: 30px;
 }
 
-.Board .delete:hover{
+#light .Board .delete:hover{
     background-color: red;
+}
+#dark .Board .delete:hover{
+    background-color: rgb(134, 0, 0);
 }
