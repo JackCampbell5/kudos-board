@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { useNavigate } from "react-router";
+import { useEffect } from 'react';
 
 
 import MainHeader from './components/allPages/MainHeader/MainHeader'
@@ -13,6 +14,7 @@ import Footer from './components/allPages/Footer/Footer'
 
 function App() {
   const navigate = useNavigate();
+  useEffect(() => { navigate("/")},[])
 
 
   const [activePage, setActivePage] = useState(["",""])
