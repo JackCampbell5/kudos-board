@@ -22,7 +22,6 @@ app.get('/seedDatabase/', (req, res) => {
         console.error(`exec error: ${error}`);
         res.status(500).send('Error seeding database');
     }else{
-    console.log(stdout);
     res.send('Database seeded successfully');
     }});
 });
