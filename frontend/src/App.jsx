@@ -6,7 +6,6 @@ import { useNavigate } from "react-router";
 import { useEffect } from 'react';
 
 
-import MainHeader from './components/allPages/MainHeader/MainHeader'
 import HomePage from './components/home/HomePage/HomePage'
 import BoardPage from './components/board/BoardPage/BoardPage'
 import Footer from './components/allPages/Footer/Footer'
@@ -36,8 +35,6 @@ function App() {
    <div className='App' id={darkMode?"dark":"light"}>
     <button onClick={() => setDarkMode(!darkMode)}>Dark Mode</button>
     {!checkFirstElementEmpty(activePage)? <button onClick={() => changeActivePage(["",""])}>Home</button> :null}
-    {/* Make into the Main header eventually  */}
-    {/* <MainHeader /> */}
     <Routes>
           <Route path="/" element={<HomePage setActivePage={changeActivePage}/>} />
           <Route path="/board" element={<BoardPage activePage={activePage}/>} />

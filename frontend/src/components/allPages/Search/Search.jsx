@@ -24,7 +24,10 @@ function Search({searchTerm,setSearchTerm,search,presetText}) {
 }
 
 Search.propTypes = {
-    // data: PropTypes.array.isRequired,
+    searchTerm: PropTypes.string.isRequired,
+    setSearchTerm: PropTypes.func.isRequired,
+    search: PropTypes.func.isRequired,
+    presetText: PropTypes.string.isRequired,
 };
 
 

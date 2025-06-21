@@ -43,7 +43,8 @@ function Giphy({gif,setGifHelper}) {
 }
 
 Giphy.propTypes = {
-    // data: PropTypes.array.isRequired,
+    gif: PropTypes.string.isRequired,
+    setGifHelper: PropTypes.func.isRequired
 };
 
 

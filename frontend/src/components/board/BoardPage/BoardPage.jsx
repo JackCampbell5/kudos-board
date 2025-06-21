@@ -4,10 +4,8 @@ import './BoardPage.css'
 import PropTypes from 'prop-types';
 import {fetchCards,createCardAPI,removePinCardAPI, addPinCardAPI} from '../../../utils/utils.js'
 import {useState, useEffect } from "react";
-import TopBoard from "../TopBoard/TopBoard.jsx";
 import CardList from "../CardList/CardList.jsx";
 import AddCard from "../AddCard/AddCard.jsx";
-import Modal from "../Modal/Modal.jsx";
 
 
 
@@ -62,13 +60,12 @@ function BoardPage({activePage}) {
         <AddCard addNewCard={addNewCard}/>
         <CardList cardList={cardList} id={id} setCardList={setCardList} pinned={pinned}/>
       </main>
-      {/* <Modal/> */}
     </div>
   );
 }
 
 BoardPage.propTypes = {
-    // data: PropTypes.array.isRequired,
+    activePage: PropTypes.string.isRequired,
 };
 
 

@@ -21,7 +21,11 @@ function TopHome({searchTerm,setSearchTerm,search, filterType, setFilterType}) {
 }
 
 TopHome.propTypes = {
-    // data: PropTypes.array.isRequired,
+    searchTerm: PropTypes.string.isRequired,
+    setSearchTerm: PropTypes.func.isRequired,
+    search: PropTypes.func.isRequired,
+    filterType: PropTypes.string.isRequired,
+    setFilterType: PropTypes.func.isRequired,
 };
 
 

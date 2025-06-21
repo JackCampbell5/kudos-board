@@ -11,7 +11,7 @@ import { useEffect } from "react";
 
 
 
-function HomePage({data,setActivePage}) {
+function HomePage({setActivePage}) {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchGo, setSearchGo] = useState("");
   function search(e){
@@ -46,7 +46,7 @@ function HomePage({data,setActivePage}) {
 }
 
 HomePage.propTypes = {
-    // data: PropTypes.array.isRequired,
+    setActivePage: PropTypes.func.isRequired,
 };
 
 

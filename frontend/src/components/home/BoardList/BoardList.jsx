@@ -31,7 +31,11 @@ function BoardList({listData, setListData, searchTerm, filterType, setActivePage
 }
 
 BoardList.propTypes = {
-    // data: PropTypes.array.isRequired,
+    listData: PropTypes.array.isRequired,
+    setListData: PropTypes.func.isRequired,
+    searchTerm: PropTypes.string.isRequired,
+    filterType: PropTypes.string.isRequired,
+    setActivePage: PropTypes.func.isRequired,
 };
 
 

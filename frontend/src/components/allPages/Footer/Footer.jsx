@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 
-function Footer({data}) {
+function Footer({}) {
   return (
     // JSX code for rendering the component
     <div className="Footer">
@@ -13,10 +13,5 @@ function Footer({data}) {
     </div>
   );
 }
-
-Footer.propTypes = {
-    // data: PropTypes.array.isRequired,
-};
-
 
 export default Footer;

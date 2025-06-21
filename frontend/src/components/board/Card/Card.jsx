@@ -47,7 +47,10 @@ function pinnedHelp(e){
 }
 
 Card.propTypes = {
-    // data: PropTypes.array.isRequired,
+    data: PropTypes.object.isRequired,
+    deleteCard: PropTypes.func.isRequired,
+    upvoteCards: PropTypes.func.isRequired,
+    pinned: PropTypes.func.isRequired,
 };
 
 

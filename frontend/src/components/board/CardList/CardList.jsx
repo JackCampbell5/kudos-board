@@ -45,7 +45,10 @@ function CardList({cardList,setCardList,id,pinned}) {
 }
 
 CardList.propTypes = {
-    // data: PropTypes.array.isRequired,
+    cardList: PropTypes.array.isRequired,
+    setCardList: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired,
+    pinned: PropTypes.func.isRequired,
 };
 
 

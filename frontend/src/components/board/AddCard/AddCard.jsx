@@ -60,7 +60,7 @@ return (
 }
 
 AddCard.propTypes = {
-    // data: PropTypes.array.isRequired,
+    addNewCard: PropTypes.func.isRequired,
 };
 
 

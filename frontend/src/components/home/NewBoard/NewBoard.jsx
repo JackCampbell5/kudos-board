@@ -74,7 +74,7 @@ function NewBoard({addNewBoard}) {
 }
 
 NewBoard.propTypes = {
-    // data: PropTypes.array.isRequired,
+    addNewBoard: PropTypes.func.isRequired,
 };
 
 

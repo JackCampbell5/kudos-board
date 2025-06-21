@@ -41,7 +41,9 @@ function Board({data,clickBoard,deleteBoard}) {
 }
 
 Board.propTypes = {
-    // data: PropTypes.array.isRequired,
+    data: PropTypes.object.isRequired,
+    clickBoard: PropTypes.func.isRequired,
+    deleteBoard: PropTypes.func.isRequired,
 };
 
 
