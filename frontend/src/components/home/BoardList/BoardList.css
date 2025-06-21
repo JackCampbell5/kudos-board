@@ -5,6 +5,8 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+/* Board total stuff */
 #boardTotal{
     margin: 50px;
 }

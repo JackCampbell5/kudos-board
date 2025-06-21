@@ -3,7 +3,7 @@
     padding: 50px 0px 100px 0px;
 }
 
-
+/* Colors for light mode */
 #light{
     color: #3e0025;
     background-color: #ffd3e2;
@@ -19,6 +19,7 @@
 }
 
 
+/* Colors for dark mode */
 
 #dark{
     color: #ffd3e2;

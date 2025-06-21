@@ -1,3 +1,4 @@
+/* Div containing all cards */
 #Cards{
     display: flex;
     gap: 10px;
@@ -5,9 +6,12 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+
 #CardTotal{
     margin: 50px;
 }
+
 #CardTotalNum{
     font-size: 60px;
     font-weight: bold;

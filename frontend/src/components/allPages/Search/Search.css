@@ -1,10 +1,11 @@
-/* The div conatining all the search elements */
+/* The div containing all the search elements for centering */
 .Search{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
+/* Inner div containing all search elements  */
 .search{
     border: 2px solid #cf8ba2;
     padding: 1px 1px 1px 3px;
@@ -13,11 +14,12 @@
     width: fit-content;
 }
 
-#light .search{
+/* The border in light and dark mode */
+#light .Search{
     border: 2px solid #cf8ba2;
 }
 
-#dark .search{
+#dark .Search{
     border: 2px solid #743050;
 }
 
@@ -29,6 +31,7 @@
     border-radius: 10px;
 }
 
+/* Input overall */
 #light .Search input{
     border: 0px solid  #cf8ba2;
     background-color:  #ffbad1;
@@ -41,6 +44,7 @@
     color: #ffc1e6;
 }
 
+/* Placeholder Text */
 .Search input::placeholder{
     padding: 0px 10px;
 }
@@ -52,6 +56,7 @@
     color: #8c7285;
 }
 
+/* The input on hover */
 #light .Search input:hover{
     background-color: #e8acc0;
 }

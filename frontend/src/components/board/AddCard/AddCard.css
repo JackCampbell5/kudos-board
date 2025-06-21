@@ -1,6 +1,7 @@
 .NewCard{
     margin: 20px;
 }
+/* Inner div shown when add is clicked */
 .addCardDiv{
     display: flex;
     gap: 10px;

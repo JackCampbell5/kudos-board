@@ -8,6 +8,7 @@
     transition: all 0.2s linear;
 }
 
+/* Border on the boards themselves */
 #light .Board{
     border: #bd7d92 solid 2px;
 }
@@ -15,6 +16,7 @@
     border: #824252 solid 2px;
 }
 
+/* Hover effect on boards */
 #light .Board:hover{
     background-color: #ffb3cc;
 }
@@ -22,19 +24,20 @@
     background-color: #4c0026;
 }
 
-
+/* Center Image in box */
 .Board .imgDiv{
-    /* Center Image in box */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
 }
+/* Image params itself */
 .Board img{
     max-width: 100%;
     max-height: 100%;
     border-radius: 10px;
 }
+/* Text on the card */
 .Board p{
     margin: 5px;
 }
@@ -49,7 +52,7 @@
 .Board .authorDiv{
     height: 5%;
 }
-
+/* Description and button on bottom of board */
 .Board .boardBottom{
     display: flex;
     justify-content: flex-end;
@@ -62,6 +65,7 @@
     width: 100%;
 }
 
+/* Delete button */
 .Board .delete{
 width: 30px;
 height: 30px;
@@ -77,6 +81,7 @@ border-radius: 5px;
     border: #8b364f solid 2px;
 }
 
+/* Icon of delete button */
 .Board svg{
     width: 30px;
     height: 30px;

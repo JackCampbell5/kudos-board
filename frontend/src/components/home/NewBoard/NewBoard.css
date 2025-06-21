@@ -1,13 +1,14 @@
 .NewBoard{
     margin: 10px;
 }
+/* Inner class that gets shown and unshown*/
 .newBoardMaker{
     border: 2px solid #f8bcd0;
     border-radius: 10px;
     padding: 5px;
     margin: 5px;
-    /* TODO ADD a transition  */
 }
+/* Each element to add */
 .addBoardDiv{
     display: flex;
     gap: 10px;
@@ -15,6 +16,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
+/* Label on each board */
 .addBoardLabel{
     font-size: large;
 }
