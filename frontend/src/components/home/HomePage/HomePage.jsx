@@ -6,7 +6,7 @@ import { useState } from "react";
 import TopHome from "../TopHome/TopHome.jsx";
 import BoardList from "../BoardList/BoardList";
 import NewBoard from "../NewBoard/NewBoard.jsx";
-import {fetchBoards,createBoardAPI} from '../../../utils/utils.js'
+import {fetchBoards,createBoardAPI} from '../../../utils/board_utils.js'
 import { useEffect } from "react";
 
 

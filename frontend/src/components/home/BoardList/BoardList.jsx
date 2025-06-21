@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import './BoardList.css'
 import PropTypes, { func } from 'prop-types';
 import Board from '../Board/Board'
-import {deleteBoardAPI} from '../../../utils/utils'
+import {deleteBoardAPI} from '../../../utils/board_utils'
 
 
 function BoardList({listData, setListData, searchTerm, filterType, setActivePage}) {

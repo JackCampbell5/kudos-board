@@ -1,23 +1,4 @@
-
 const boardLink = import.meta.env.VITE_BACKEND_API+"/boards/";
-export async function fetchBoards(after){
-    await fetch(`${boardLink}`)
-    .then(response => {
-        if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json(); // Parse JSON data from the response
-    })
-    .then(data => {
-        // Update UI or perform other actions with the data
-        after(data);
-    })
-    .catch(error => {
-        // Handle error
-        console.error('Error fetching boards:', error);
-        // Display an error message or retry the request
-    });
-}
 
 export async function fetchCards(id,after){
     await fetch(`${boardLink}${id}/cards`)
@@ -38,38 +19,6 @@ export async function fetchCards(id,after){
     });
 }
 
-
-export async function deleteBoardAPI(id,after) {
-    await fetch(`${boardLink}delete/${id}`,{method: 'DELETE'})
-    .then(response => {
-        if (!response.ok) {
-        throw new Error(`Error deleting error! status: ${response.status}`);
-        }else{
-            after();
-        }});
-
-}
-
-export async function createBoardAPI(info,after) {
-    await fetch(`${boardLink}add`,{method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(info)})
-    .then(response => {
-        if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json(); // Parse JSON data from the response
-    })
-    .then(data => {
-        // Update UI or perform other actions with the data
-        after(data);
-    })
-    .catch(error => {
-        // Handle error
-        console.error('Error fetching boards:', error);
-        // Display an error message or retry the request
-    });
-}
-
-
 export async function createCardAPI(id,info,after) {
     await fetch(`${boardLink}${id}/cards/add`,{method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(info)})
     .then(response => {
@@ -89,6 +38,16 @@ export async function createCardAPI(id,info,after) {
     });
 }
 
+export async function deleteCardAPI(boardID, cardID,after) {
+    await fetch(`${boardLink}${boardID}/cards/${cardID}/delete`,{method: 'DELETE'})
+    .then(response => {
+        if (!response.ok) {
+        throw new Error(`Error deleting error! status: ${response.status}`);
+        }else{
+            after();
+        }});
+
+}
 
 export async function addVoteCardAPI(boardID,cardID,after) {
     await fetch(`${boardLink}${boardID}/cards/${cardID}/voteUp`,{method: 'PUT', headers: {'Content-Type': 'application/json'}})
@@ -108,19 +67,6 @@ export async function addVoteCardAPI(boardID,cardID,after) {
         // Display an error message or retry the request
     });
 }
-
-
-export async function deleteCardAPI(boardID, cardID,after) {
-    await fetch(`${boardLink}${boardID}/cards/${cardID}/delete`,{method: 'DELETE'})
-    .then(response => {
-        if (!response.ok) {
-        throw new Error(`Error deleting error! status: ${response.status}`);
-        }else{
-            after();
-        }});
-
-}
-
 
 export async function addPinCardAPI(boardID,cardID,setToafter,after) {
     await fetch(`${boardLink}${boardID}/cards/${cardID}/pin/${setToafter}`,{method: 'PUT', headers: {'Content-Type': 'application/json'}})
@@ -159,30 +105,3 @@ export async function removePinCardAPI(boardID,cardID,after) {
         // Display an error message or retry the request
     });
 }
-
-
-
-
-export function catTranslate(category){
-    switch (category) {
-        case "all":
-            return "Home"
-        case "recent":
-            return "Recent"
-        case "celebration":
-            return "Celebration"
-        case "thanks":
-            return "Thank You"
-        case "inspo":
-            return "Inspiration"
-    }
-
-}
-
-
-export function convertToTitleCase(str) {
-    if (!str) {
-      return "";
-    }
-    return str.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase());
-  }

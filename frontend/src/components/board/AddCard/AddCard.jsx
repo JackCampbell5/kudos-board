@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import './AddCard.css'
 import PropTypes from 'prop-types';
 import { useState } from "react";
-import {convertToTitleCase} from '../../../utils/utils.js'
+import {convertToTitleCase} from '../../../utils/category_utils.js'
 import Giphy from "../../allPages/Giphy/Giphy";
 
 

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import './BoardPage.css'
 import PropTypes from 'prop-types';
-import {fetchCards,createCardAPI,removePinCardAPI, addPinCardAPI} from '../../../utils/utils.js'
+import {fetchCards,createCardAPI,removePinCardAPI, addPinCardAPI} from '../../../utils/card_utils.js'
 import {useState, useEffect } from "react";
 import CardList from "../CardList/CardList.jsx";
 import AddCard from "../AddCard/AddCard.jsx";
