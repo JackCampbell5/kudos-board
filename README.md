@@ -2,9 +2,9 @@
 
 ## Unit Assignment: Kudos Board
 
-Submitted by: **NAME**
+Submitted by: Jack Campbell
 
-Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
+Deployed Application: [Kudos Board Deployed Site](https://kudos-board-l7f2.onrender.com/)
 
 ### Application Features
 
@@ -43,8 +43,8 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
     - [x] Clicks the Submit/Search button
   - [x] User can delete all text from the text input field.
   - [x] When all text is cleared from the text input field, all boards are displayed in a grid view
-- [ ] **View Board**
-  - [ ] Users can click on a board in the grid view to navigate to a new page containing that board's details.
+- [x] **View Board**
+  - [x] Users can click on a board in the grid view to navigate to a new page containing that board's details.
 - [x] **Add New Board**
   - [x] Users can create a new board on the home page.
   - [x] When creating a new board, users can specify the:
@@ -70,8 +70,8 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
   - [x] Users can make a new card associated with the current board.
   - [x] To successfully create a new card, users must specify the following:
     - [x] Text message (required).
-    - [ ] A gif users can search for and select within the form using the [GIPHY API](https://developers.giphy.com/docs/api/) (required).
-  - [ ] Users are given the option to specify the author of the card.
+    - [x] A gif users can search for and select within the form using the [GIPHY API](https://developers.giphy.com/docs/api/) (required).
+  - [x] Users are given the option to specify the author of the card.
   - [x] When the new card is successfully created, it appears in the grid of cards.
 - [x] **Upvote Card**
   - [x] Users can upvote a card.
@@ -83,7 +83,7 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
   - [x] When the user clicks the delete button for a card, the card disappears from the grid of cards.
 - [x] **Deployment**
   - [x] Website is deployed via Render.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough.
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough.
 
 ####  Stretch Features
 
@@ -114,7 +114,7 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
     - [x] Color contrast has at least a 4.5:1 ratio using this [color contrast checker](https://webaim.org/resources/contrastchecker/)
   - [x] The chosen mode (light or dark) persists when navigating from home page to board pages and vice versa.
   - [x] When the user first visits the site the theme defaults to light mode.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast in both light and dark mode. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it.
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast in both light and dark mode. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it.
 - [x] **Pinned Cards**
   - [x] Users can pin a card to the top of the board.
   - [x] A Pin button is displayed on each card.
@@ -137,29 +137,33 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
+[Walkthrough Video Link](https://www.loom.com/share/c987f66d6d9b4d5fa7117b1c4166ba69?sid=acb416b5-8d58-4005-b9fa-06a6c66798a7)
 
-`ADD_EMBEDDED_CODE_HERE`
+[Color Contrast Light](https://webaim.org/resources/contrastchecker/?fcolor=3E0025&bcolor=FFD3E2)
+[Color Contrast Dark](https://webaim.org/resources/contrastchecker/?fcolor=FFD3E2&bcolor=3E0025)
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The topics discussed in the labs were definitely prepared to complete the assignment. It was great to get practice with endpoints in a very simple environment where it was clear to see the problems before moving onto our project. It was also helpful to go thru databased and have example code that we knew worked to look at while completing the project.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
-Add your response here
+If I had more time I would have liked to add the comments feature. I had a plan for how to do it but with all the capstone work I just ran out of time. I would also have liked to play around with simplifying my amount of components because I feel like there were ways to have less components with the same functionality as many components did very simi;lar things. I would have at least liked to done simpler CSS because some CSS files are very similar to another.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+The project demo video went well. My only problem is I forgot to go over the color contrast tool. I did put it next to the video so hopefully it does not cause grading concerns. Other than that I feel like I clearly explained all my features though I could have taken less pauses.
+The project demo video went well. My only problem is I forgot to go over the color contrast tool. I did put it next to the video so hopefully it does not cause grading concerns. Other than that I feel like I clearly explained all my features though I could have taken less pauses.
+
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+- [React Icons Library](https://react-icons.github.io/react-icons/)
 
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
-# kudos-board
+
+Jesus because he took the time to explain why databases were setup the way they are on a deeper level which really helped me understand them
