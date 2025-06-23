@@ -26,7 +26,7 @@ function AddCard({addNewCard}) {
   function submit() {
     let newHelper = ({...newCard, icon: gif})
       for (const key in newHelper) {
-      if(newHelper[key] === "") {
+      if(newHelper[key] === "" && key!="author") {
           alert("Please fill out all fields");
           //TODO make all felids red when they are not filled out and submit is clicked
           return;
